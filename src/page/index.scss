@@ -1,0 +1,31 @@
+.container {
+    display: grid;
+    grid-gap: 10px 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, auto);
+    margin: 50px;
+    .text {
+        span:nth-child(2) {
+            color: #f00;
+        }
+    }
+}
+.wrapper {
+    display: grid;
+    grid-gap: 10px 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .item {
+        background-color: #eaf2ed;
+        border-radius: 10px;
+        padding: 20px;
+        button + button {
+            margin-left: 10px;
+        }
+        pre {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            overflow-x: auto;
+        }
+    }
+}
