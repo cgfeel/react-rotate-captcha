@@ -37,7 +37,6 @@ export function sleep(time: number) {
 }
 
 export async function verify(token: string, deg: number): Promise<TicketInfoType> {
-    console.log(angle, deg);
     const success = token === tokenRaw && Math.abs(deg - angle) <= 5;
     return success ? {
         code: 0,
