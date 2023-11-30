@@ -71,4 +71,17 @@ export async function verify(token: string, deg: number): Promise<TicketInfoType
     const info = await request.json();
     return info;*/
 }
+
+export async function ticket(ticket?: TicketInfoType) {
+    const { data } = ticket||{};
+    const response = await fetch(`http://${location.hostname}:8000/rotate.captcha/test/action`, data === undefined ? {} : {
+        headers: {
+            'X-Captchasid': data.sid,
+            'X-Captchaticket': data.ticket,
+        },
+    });
+    
+    const info: ActionType = await response.json();
+    return info;
+}
 ```

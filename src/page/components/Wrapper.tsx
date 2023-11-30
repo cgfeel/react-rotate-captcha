@@ -1,6 +1,7 @@
 import { FC, PropsWithChildren, ReactNode, createContext, useState } from "react";
 import { TicketInfoType } from "../../App";
 import '../index.scss';
+import { ActionType } from "../server";
 
 const Wrapper: FC<PropsWithChildren<WrapperProps>> = ({ captcha, children, ticket }) => {
     const [info, setInfo] = useState<ActionType|undefined>(undefined);
@@ -31,11 +32,6 @@ interface WrapperContextInstance {
 }
 
 export const WrapperContext = createContext<WrapperContextInstance>({} as WrapperContextInstance);
-
-export type ActionType = {
-    code: 0|1;
-    msg: string;
-};
 
 export interface WrapperProps {
     captcha?: ReactNode;

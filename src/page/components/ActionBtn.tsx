@@ -1,21 +1,14 @@
 import { FC, useCallback, useContext } from "react";
 import { TicketInfoType } from "../../App";
-import { ActionType, WrapperContext } from "./Wrapper";
+import { checkTicket } from "../server";
+import { WrapperContext } from "./Wrapper";
 
 const ActionBtn: FC<ActionBtnProps> = ({ ticket }) => {
     const { setInfo } = useContext(WrapperContext);
     const { data } = ticket||{};
 
     const getInfo = useCallback(async (ticket?: TicketInfoType) => {
-        const { data } = ticket||{};
-        const response = await fetch(`http://${location.hostname}:8000/rotate.captcha/test/action`, data === undefined ? {} : {
-            headers: {
-                'X-Captchasid': data.sid,
-                'X-Captchaticket': data.ticket,
-            },
-        });
-        
-        const info: ActionType = await response.json();
+        const info = await checkTicket(ticket);
         setInfo(info);
     }, [setInfo]);
 
