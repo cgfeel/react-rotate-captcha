@@ -1,4 +1,4 @@
-import Captcha, { CaptchaInstance, CaptchaProps, resultType, ticketType } from "./components/Captcha";
+import Captcha, { CaptchaInstance, CaptchaProps, resultType, ticketType, tokenType } from "./components/Captcha";
 import { LangType } from "./components/lang";
 import useCaptchaInstance from "./components/useCaptchaInstance";
 
@@ -13,11 +13,14 @@ const RotateCaptcha = Captcha as CompoundedComponent;
 RotateCaptcha.useCaptchaInstance = useCaptchaInstance;
 
 type TicketInfoType = resultType<ticketType>;
+type TokenInfoType = resultType<tokenType>;
+
 export type {
     CaptchaInstance,
     CaptchaProps,
     LangType,
     TicketInfoType,
+    TokenInfoType,
 };
 
 export { RotateCaptcha };

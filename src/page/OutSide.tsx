@@ -2,7 +2,8 @@ import { FC, useRef, useState } from "react";
 import { CaptchaInstance, RotateCaptcha, TicketInfoType } from "../App";
 import ActionBtn from "./components/ActionBtn";
 import Wrapper from "./components/Wrapper";
-import './index.scss';
+import "./index.scss";
+import { get, load, verify } from "./server";
 
 const OutSide: FC = () => {
     const ref = useRef<CaptchaInstance>(null);
@@ -14,29 +15,10 @@ const OutSide: FC = () => {
         >
             <RotateCaptcha
                 ref={ref}
-                get={async () => {
-                    const request = await fetch(`http://${location.hostname}:8000/rotate.captcha`);
-                    const headers = request.headers;
-
-                    const info = await request.json();
-                    info.data.token = headers.get('X-Captchatoken');
-                    
-                    return info;
-                }}
-                load={async (path) => {
-                    return `http://${location.hostname}:8000/rotate.captcha/${path}`;
-                }}
+                get={get}
+                load={load}
                 result={info => setTicket(info)}
-                verify={async (token, deg) => {
-                    const request = await fetch(`http://${location.hostname}:8000/rotate.captcha/verify/${deg}`, {
-                        method: "GET",
-                        headers: {
-                            'X-Captchatoken': token,
-                        }
-                    });
-                    const info = await request.json();
-                    return info;
-                }}
+                verify={verify}
             >
                 <div
                     className="row"

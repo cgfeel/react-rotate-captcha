@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle, useState } from "react";
 import { RotateCaptcha, TicketInfoType } from "../App";
 import ActionBtn from "./components/ActionBtn";
 import Wrapper from "./components/Wrapper";
-import './index.scss';
+import "./index.scss";
 
 const PageDemo = forwardRef<DemoInstance>((_, ref) => {
     const captcha = RotateCaptcha.useCaptchaInstance();
