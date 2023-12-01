@@ -100,7 +100,7 @@ const RotateCaptcha = forwardRef<RotateCaptchaInstance, PropsWithChildren<Rotate
 export interface RotateCaptchaInstance {
     load: (num?: 0|1|2) => void;    // 0.强制销毁，1.打开，2.关闭
     start: () => Promise<void>;
-    toVerify: (deg: number) => ReturnType<CaptchaProps['verify']>;
+    toVerify: (deg: number) => ReturnType<Required<CaptchaProps>['verify']>;
 }
 
 export interface RotateCaptchaProps extends Pick<CaptchaProps, 'className'|'get'|'theme'|'verify'|'zIndex'> {

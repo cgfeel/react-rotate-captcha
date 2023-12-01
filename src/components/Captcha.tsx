@@ -147,7 +147,7 @@ export interface CaptchaProps {
     get?: () => Promise<resultType<tokenType>>;
     load?: (path: string) => Promise<string>;
     result?: (info: resultType<ticketType>) => void;
-    verify: (token: string, deg: number) => Promise<resultType<ticketType>>;
+    verify?: (token: string, deg: number) => Promise<resultType<ticketType>>;
 }
 
 /**

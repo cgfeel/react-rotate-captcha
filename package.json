@@ -1,12 +1,13 @@
 {
   "name": "react-rotate-captcha",
-  "version": "0.0.1",
+  "version": "1.0.2",
   "description": "Rotate image captcha，旋转图片验证码",
-  "main": "/src/App.tsx",
+  "main": "./src/App.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config config/webpack.dev.config.js",
-    "build": "webpack --config config/webpack.prod.config.js"
+    "build": "webpack --config config/webpack.prod.config.js",
+    "pub": "pub"
   },
   "keywords": [
     "react",
@@ -15,6 +16,11 @@
   ],
   "author": "levi",
   "license": "MIT",
+  "homepage": "https://github.com/cgfeel/react-rotate-captcha",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cgfeel/react-rotate-captcha"
+  },
   "devDependencies": {
     "@babel/cli": "^7.23.0",
     "@babel/core": "^7.23.3",
@@ -22,6 +28,7 @@
     "@babel/preset-env": "^7.23.3",
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
+    "@pureadmin/release": "^1.0.0",
     "@svgr/webpack": "^8.1.0",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",

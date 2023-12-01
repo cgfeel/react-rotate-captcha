@@ -33,10 +33,7 @@ const prodConfig = {
                         options: {
                             postcssOptions: {
                                 plugins: [
-                                    'postcss-preset-env',
-                                    {
-                                        // 其他选项
-                                    }
+                                    'postcss-preset-env'
                                 ]
                             }
                         },
