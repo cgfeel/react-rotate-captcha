@@ -1,5 +1,5 @@
 import { FC, useRef, useState } from "react";
-import { CaptchaInstance, RotateCaptcha, TicketInfoType } from "../App";
+import { CaptchaInstance, RotateCaptcha, TicketInfoType } from "../";
 import ActionBtn from "./components/ActionBtn";
 import Wrapper from "./components/Wrapper";
 import "./index.scss";

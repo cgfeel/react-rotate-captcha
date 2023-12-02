@@ -1,5 +1,5 @@
 import { forwardRef, useImperativeHandle, useState } from "react";
-import { RotateCaptcha, TicketInfoType } from "../App";
+import { RotateCaptcha, TicketInfoType } from "../";
 import ActionBtn from "./components/ActionBtn";
 import Wrapper from "./components/Wrapper";
 import "./index.scss";

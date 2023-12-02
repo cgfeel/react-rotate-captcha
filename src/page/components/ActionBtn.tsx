@@ -1,5 +1,5 @@
 import { FC, useCallback, useContext } from "react";
-import { TicketInfoType } from "../../App";
+import { TicketInfoType } from "../../";
 import { checkTicket } from "../server";
 import { WrapperContext } from "./Wrapper";
 

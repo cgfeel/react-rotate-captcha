@@ -1,9 +1,9 @@
 import { StrictMode, useRef } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App";
-import PageDemo from "./page";
-import OutSide from "./page/OutSide";
-import { get, load, verify } from "./page/server";
+import App from "react-rotate-captcha";
+import PageDemo from "../../src/page";
+import OutSide from "../../src/page/OutSide";
+import { get, load, verify } from "../../src/page/server";
 
 const Root = () => {
     const demoRef = useRef(null);

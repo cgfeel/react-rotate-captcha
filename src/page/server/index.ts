@@ -1,4 +1,4 @@
-import { TicketInfoType, TokenInfoType } from "../../App";
+import type { TicketInfoType, TokenInfoType } from "../../";
 import { handle } from "./canvas";
 
 export type ActionType = {

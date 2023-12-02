@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren, ReactNode, createContext, useState } from "react";
-import { TicketInfoType } from "../../App";
+import { TicketInfoType } from "../../";
 import '../index.scss';
 import { ActionType } from "../server";
 

@@ -1,17 +1,13 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const devConfig = {
     mode: "development",  // 开发模式
-    entry: path.join(__dirname, "../src/index.jsx"),  // 入口，处理资源文件的依赖关系
+    entry: path.join(__dirname, "../demo/src/index.jsx"),  // 入口，处理资源文件的依赖关系
     output: {
         path: path.join(__dirname, "../demo/src"),
         filename: "./index_bundle.js",
-    },
-    watchOptions: {
-        ignored: /node_modules/,
     },
     module: {
         rules: [
@@ -55,12 +51,6 @@ const devConfig = {
             }
         ]
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: path.join(__dirname, "../demo/src/index.html"),
-        })
-    ],
     devServer: {
         static: path.join(__dirname, "../demo/src/"),
         compress: true,

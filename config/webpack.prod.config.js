@@ -2,11 +2,10 @@ const path = require('path');
 const { merge } = require('webpack-merge');
 const baseConfig = require('./webpack.base');    // 引用公共的配置
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');    // 用于将组件的css打包成单独的文件输出到`lib`目录中
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const prodConfig = {
     mode: 'production',    // 生产模式
-    entry: path.join(__dirname, '../src/App.tsx'),
+    entry: path.join(__dirname, '../src/index.tsx'),
     output: {
         path: path.join(__dirname, '../lib/'),
         filename: "./index_bundle.js",
@@ -47,11 +46,6 @@ const prodConfig = {
         new MiniCssExtractPlugin({
             filename: "index.min.css"    // 提取后的css的文件名
         })
-        /*,
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: path.join(__dirname, "../demo/src/index.html"),
-        })*/
     ],
     // 定义外部依赖，避免把react和react-dom打包进去
     externals: {
