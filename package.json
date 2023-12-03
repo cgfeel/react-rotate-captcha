@@ -1,8 +1,9 @@
 {
   "name": "react-rotate-captcha",
-  "version": "1.0.5",
+  "version": "1.0.12",
   "description": "Rotate image captcha，旋转图片验证码",
-  "main": "./src/index.tsx",
+  "main": "./lib/index_bundle.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config config/webpack.dev.config.js",
@@ -44,7 +45,6 @@
     "react-dom": "^18.2.0",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
-    "ts-loader": "^9.5.1",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1",

@@ -1,23 +1,23 @@
 import { StrictMode, useRef } from "react";
 import { createRoot } from "react-dom/client";
-import App from "react-rotate-captcha";
-import PageDemo from "../../src/page";
-import OutSide from "../../src/page/OutSide";
-import { get, load, verify } from "../../src/page/server";
+import RotateCaptcha from "react-rotate-captcha";
+import PageDemo from "./page";
+import OutSide from "./page/OutSide";
+import { get, load, verify } from "./server";
 
 const Root = () => {
     const demoRef = useRef(null);
     return (
         <StrictMode>
-            <App
-                open={true}
+            <RotateCaptcha
+                open={false}
                 get={get}
                 load={load}
                 result={info => demoRef.current.setTicket(info)}
                 verify={verify}
             >
                 <PageDemo ref={demoRef} />
-            </App>
+            </RotateCaptcha>
             <OutSide />
         </StrictMode>
     );

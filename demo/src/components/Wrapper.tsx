@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren, ReactNode, createContext, useState } from "react";
-import { TicketInfoType } from "../../";
+import { TicketInfoType } from "react-rotate-captcha";
 import '../index.scss';
 import { ActionType } from "../server";
 

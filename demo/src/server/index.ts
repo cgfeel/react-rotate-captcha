@@ -1,4 +1,4 @@
-import type { TicketInfoType, TokenInfoType } from "../../";
+import type { TicketInfoType, TokenInfoType } from "react-rotate-captcha";
 import { handle } from "./canvas";
 
 export type ActionType = {

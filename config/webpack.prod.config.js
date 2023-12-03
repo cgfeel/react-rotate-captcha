@@ -12,13 +12,14 @@ const prodConfig = {
         libraryTarget: 'umd',    // 采用通用模块定义
         libraryExport: 'default',    // 兼容 ES6 Module、CommonJS 和 AMD 模块规范
     },
+    devtool: 'source-map',
     module: {
         rules: [
             {
                 test: /\.(sa|sc|c)ss$/,
                 exclude: /.min.css$/,
                 use: [
-                    { loader: MiniCssExtractPlugin.loader },
+                    { loader: 'style-loader' },
                     {
                         loader: 'css-loader',
                         options: {

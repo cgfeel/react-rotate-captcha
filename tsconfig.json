@@ -5,7 +5,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "noEmit": true,
+    "noEmit": false,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -14,6 +14,8 @@
     "jsx": "preserve",
     "incremental": true,
     "sourceMap": true,
+    "declaration": true,
+    "outDir": "lib",
     "plugins": [
       {
         "name": "next"

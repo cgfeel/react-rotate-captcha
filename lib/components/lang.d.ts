@@ -1,0 +1,30 @@
+export declare const zh_CN: {
+    desc: string;
+    getFaild: string;
+    loadFaild: string;
+    loadImg: string;
+    loadTips: string;
+    lostProps: string;
+    refresh: string;
+    sendError: string;
+    success: string;
+    title: string;
+    verifying: string;
+    wait: string;
+};
+export declare const en: {
+    desc: string;
+    getFaild: string;
+    loadFaild: string;
+    loadImg: string;
+    loadTips: string;
+    lostProps: string;
+    refresh: string;
+    sendError: string;
+    success: string;
+    title: string;
+    verifying: string;
+    wait: string;
+};
+export declare function choose(lang: string): LangType;
+export type LangType = typeof en;

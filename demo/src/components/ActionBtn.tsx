@@ -1,5 +1,5 @@
 import { FC, useCallback, useContext } from "react";
-import { TicketInfoType } from "../../";
+import { TicketInfoType } from "react-rotate-captcha";
 import { checkTicket } from "../server";
 import { WrapperContext } from "./Wrapper";
 
