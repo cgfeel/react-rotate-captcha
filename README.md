@@ -183,6 +183,18 @@ function App() {
 - response: `{ code: 0|1; msg: string; data: { ${str}: string } }`
 - res header: `X-Captchatoken: ${token}`
 
+> `code`的状态：0.正常; 1.错误可继续; 2.错误重新开始; 注意：小于0的值为内部保留状态，请勿使用
+
+## 📜 组件类型引导 (TypeScript)
+
+如果安装后获取不到组件类型，请在`tsconfig.json`的`compilerOptions`添加如下引导：
+
+```
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
+```
+
 ## 🛟 设计思路 (Design)
 
 高级用法：
