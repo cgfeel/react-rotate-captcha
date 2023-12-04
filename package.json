@@ -1,6 +1,6 @@
 {
   "name": "react-rotate-captcha",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Rotate image captcha，旋转图片验证码",
   "main": "./lib/index_bundle.js",
   "types": "./lib/index.d.ts",
@@ -17,7 +17,7 @@
   ],
   "author": "levi",
   "license": "MIT",
-  "homepage": "./lib/",
+  "homepage": "https://github.com/cgfeel/react-rotate-captcha",
   "repository": {
     "type": "git",
     "url": "https://github.com/cgfeel/react-rotate-captcha"

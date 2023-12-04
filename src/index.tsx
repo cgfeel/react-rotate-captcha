@@ -1,4 +1,4 @@
-import Captcha, { CaptchaInstance, CaptchaProps, resultType, ticketType, tokenType } from "./components/Captcha";
+import Captcha, { CaptchaContext, CaptchaInstance, CaptchaProps, resultType, ticketType, tokenType } from "./components/Captcha";
 import { LangType } from "./components/lang";
 import useCaptchaInstance from "./components/useCaptchaInstance";
 
@@ -23,6 +23,6 @@ export type {
     TokenInfoType,
 };
 
-export { RotateCaptcha };
+export { RotateCaptcha, CaptchaContext };
 
 export default RotateCaptcha;
