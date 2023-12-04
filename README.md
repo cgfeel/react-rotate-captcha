@@ -44,7 +44,7 @@ function App() {
 }
 ```
 
-通过`context`唤起
+通过`Instance`唤起
 
 ```tsx
 import RotateCaptcha from "react-rotate-captcha";
