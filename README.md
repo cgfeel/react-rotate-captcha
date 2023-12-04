@@ -8,6 +8,28 @@
 
 Demo整理中。。。
 
+## 📦 安装 (Installing)
+
+Using NPM
+
+```
+npm install react-rotate-captcha
+```
+
+Using Yarn
+
+```
+yarn add react-rotate-captcha
+```
+
+Using PNPM
+
+```
+pnpm add react-rotate-captcha
+```
+
+## 🔨 使用 (Usage)
+
 ```
 import { TicketInfoType, TokenInfoType } from "../../App";
 import { handle } from "./canvas";
@@ -92,3 +114,28 @@ export async function ticket(ticket?: TicketInfoType) {
     return info;
 }
 ```
+
+## 🛟 设计思路 (Design)
+
+![New Board](https://github.com/cgfeel/laravel-rotate-captcha/assets/578141/27e82f87-0937-4e23-9e08-395fd9f0adda)
+
+## ✂️ 物料 (Material)
+
+即时设计的向量稿件，包含组件设计规范：[查看](https://js.design/community?category=detail&type=resource&id=6561674f12aadf8dee1b33c2)
+
+![911700882740_ pic](https://github.com/cgfeel/laravel-rotate-captcha/assets/578141/ea1532fa-17e1-4d08-b005-5089f705388c)
+
+## 🔗 相关产品 (Product)
+
+### react前端组件
+
+整理中，待开放...
+
+### isszz/rotate-captcha
+
+第三方仓库，提供了react和laravel之外的生态扩展 [[点击打开](https://github.com/isszz/rotate-captcha)]
+
+包含：
+
+- 前端：vue、uni-app
+- 后端：php、ThinkPHP
