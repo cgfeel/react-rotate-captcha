@@ -166,7 +166,7 @@ function App() {
 
 ### 鉴权测试，请根据实际情况替换鉴权接口
 
-- URL: `/rotate.captcha/verify/${angle}/${token?}`
+- URL: `/rotate.captcha/test/action`
 - method: `GET|POST`
 - response: `{ code: 0|1|2; msg: string; }`
 - req header: `X-Captchasid: ${sid}; X-Captchaticket: ${ticket}; X-Captchapolicie?: ${police}`
