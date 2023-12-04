@@ -1,8 +1,12 @@
 ![logo-react](https://github.com/cgfeel/react-rotate-captcha/assets/578141/0510ddac-2c95-47f5-a6f4-e0ee8335da3c)
 
-[![NPM version](https://img.shields.io/npm/v/react-rotate-captcha.svg?style=flat)](https://www.npmjs.com/package/react-rotate-captcha) [![NPM downloads](https://img.shields.io/npm/dm/react-rotate-captcha.svg?style=flat)](https://www.npmjs.com/package/react-rotate-captcha) [![React library](https://img.shields.io/badge/react-libaray-blue)](https://www.npmjs.com/package/react-rotate-captcha) [![React component](https://img.shields.io/badge/react-component-green)](https://www.npmjs.com/package/react-rotate-captcha) [![Typescript](https://img.shields.io/badge/typescript-8A2BE2)](https://www.npmjs.com/package/react-rotate-captcha) [![License](https://img.shields.io/npm/l/react-rotate-captcha)](https://github.com/cgfeel/react-rotate-captcha/blob/main/LICENSE.txt) [![npm bundle size (minzip)](https://img.shields.io/bundlephobia/minzip/react-rotate-captcha)](https://www.npmjs.com/package/react-rotate-captcha) [![npm bundle size (min)](https://img.shields.io/bundlephobia/min/react-rotate-captcha)](https://www.npmjs.com/package/react-rotate-captcha)
+[![NPM version](https://img.shields.io/npm/v/react-rotate-captcha.svg?style=flat)](https://www.npmjs.com/package/react-rotate-captcha) [![NPM downloads](https://img.shields.io/npm/dm/react-rotate-captcha.svg?style=flat)](https://www.npmjs.com/package/react-rotate-captcha) [![React library](https://img.shields.io/badge/react-libaray-blue)](https://www.npmjs.com/package/react-rotate-captcha) [![React component](https://img.shields.io/badge/react-component-green)](https://www.npmjs.com/package/react-rotate-captcha) [![Typescript](https://img.shields.io/badge/typescript-8A2BE2)](https://www.npmjs.com/package/react-rotate-captcha) [![License](https://img.shields.io/npm/l/react-rotate-captcha)](https://github.com/cgfeel/react-rotate-captcha/blob/main/LICENSE) [![npm bundle size (minzip)](https://img.shields.io/bundlephobia/minzip/react-rotate-captcha)](https://www.npmjs.com/package/react-rotate-captcha) [![npm bundle size (min)](https://img.shields.io/bundlephobia/min/react-rotate-captcha)](https://www.npmjs.com/package/react-rotate-captcha)
 
-A captcha extension package for React
+一个开箱即用的滑动验证码React组件，基于[[isszz/rotate-captcha](https://github.com/isszz/rotate-captcha)]做的二次开发；结合了腾讯防水墙，增加安全策略，查看：策略 和 设计思路
+
+<img width="351" alt="image" src="https://github.com/cgfeel/laravel-rotate-captcha/assets/578141/0f6d4073-2811-4c5b-807d-a95d56973848">
+
+Demo整理中。。。
 
 ```
 import { TicketInfoType, TokenInfoType } from "../../App";
