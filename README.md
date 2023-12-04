@@ -159,7 +159,7 @@ function App() {
 
 - **URL: ** `/rotate.captcha/verify/${angle}/${token?}`
 - **method: ** `GET`
-- **response: **: `{ code: 0|1|2; msg: string; data?: { ${sid}: string; ${ticket}: string; } }`
+- **response: ** `{ code: 0|1|2; msg: string; data?: { ${sid}: string; ${ticket}: string; } }`
 - **req header: ** `X-Captchatoken: ${token}`
 
 `URL`中或`req header`中的，至少有一处提供`${token?}`
