@@ -4,6 +4,8 @@
 
 一个开箱即用的滑动验证码React组件，基于[[isszz/rotate-captcha](https://github.com/isszz/rotate-captcha)]做的二次开发；结合了腾讯防水墙，增加安全策略，查看：策略 和 设计思路
 
+后端提供`Laravel`扩展：`levi/laravel-rotate-captcha` [[查看](https://github.com/cgfeel/laravel-rotate-captcha)]，可直接使用或参考下方Api接口定制
+
 <img width="351" alt="image" src="https://github.com/cgfeel/laravel-rotate-captcha/assets/578141/0f6d4073-2811-4c5b-807d-a95d56973848">
 
 Demo整理中。。。
@@ -216,9 +218,9 @@ function App() {
 
 ## 🔗 相关产品 (Product)
 
-### react前端组件
+### `Laravel`扩展
 
-整理中，待开放...
+后端提供`Laravel`扩展：`levi/laravel-rotate-captcha` [[查看](https://github.com/cgfeel/laravel-rotate-captcha)]，可直接使用或参考上方Api接口定制
 
 ### isszz/rotate-captcha
 
