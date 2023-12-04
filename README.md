@@ -144,33 +144,51 @@ function App() {
 
 ### 获取验证码信息
 
-- **URL: ** `/rotate.captcha`
-- **method: ** `GET`
-- **response: **: `{ code: 0|1; msg: string; data: { ${str}: string } }`
-- **res header: ** `X-Captchatoken: ${token}`
+- URL: `/rotate.captcha`
+- method: `GET`
+- response: `{ code: 0|1; msg: string; data: { ${str}: string } }`
+- res header: `X-Captchatoken: ${token}`
 
 ### `str`换image
 
-- **URL: ** `/rotate.captcha/${str}`
-- **method: ** `GET`
-- **response: **: image url or base64
+- URL: `/rotate.captcha/${str}`
+- method: `GET`
+- response: image url or base64
 
 ### 验证信息，`token`换`ticket`
 
-- **URL: ** `/rotate.captcha/verify/${angle}/${token?}`
-- **method: ** `GET`
-- **response: ** `{ code: 0|1|2; msg: string; data?: { ${sid}: string; ${ticket}: string; } }`
-- **req header: ** `X-Captchatoken: ${token}`
+- URL: `/rotate.captcha/verify/${angle}/${token?}`
+- method: `GET`
+- response: `{ code: 0|1|2; msg: string; data?: { ${sid}: string; ${ticket}: string; } }`
+- req header: `X-Captchatoken: ${token}`
 
 `URL`中或`req header`中的，至少有一处提供`${token?}`
 
 ### 鉴权测试，请根据实际情况替换鉴权接口
 
-- **URL: ** `/rotate.captcha/verify/${angle}/${token?}`
-- **method: ** `GET`
-- **response: **: `{ code: 0|1|2; msg: string; data?: { ${sid}: string; ${ticket}: string; } }`
+- URL: `/rotate.captcha/verify/${angle}/${token?}`
+- method: `GET|POST`
+- response: `{ code: 0|1|2; msg: string; }`
+- req header: `X-Captchasid: ${sid}; X-Captchaticket: ${ticket}; X-Captchapolicie?: ${police}`
+
+请求可以通过`header`或`POST formData`或`POST raw`提交；安全策略`police`根据服务器配置决定是否提交
+
+### 自定义获取验证信息
+
+当需要匹配不同尺寸的设备时，或者一些老的设备不支持`webp`的情况下，通过这个接口获取定制的验证图片
+
+- URL: `/rotate.captcha`
+- method: `POST`
+- formData: `{ size?: number; output?: 'jpg'|'png'|'webp' }`
+- response: `{ code: 0|1; msg: string; data: { ${str}: string } }`
+- res header: `X-Captchatoken: ${token}`
 
 ## 🛟 设计思路 (Design)
+
+高级用法：
+
+- 验证流程中`ua`实际并不局限使用`User-Agent`，可以通过自定义头部加密拼接增加安全系数
+- 除了头部，包括图片路径，都可以在本地通过二次加密`encryption`的方式增加安全系数
 
 ![New Board](https://github.com/cgfeel/laravel-rotate-captcha/assets/578141/27e82f87-0937-4e23-9e08-395fd9f0adda)
 
@@ -179,6 +197,10 @@ function App() {
 即时设计的向量稿件，包含组件设计规范：[查看](https://js.design/community?category=detail&type=resource&id=6561674f12aadf8dee1b33c2)
 
 ![911700882740_ pic](https://github.com/cgfeel/laravel-rotate-captcha/assets/578141/ea1532fa-17e1-4d08-b005-5089f705388c)
+
+## 🗓️ 更新日志 (Changelog)
+
+具体请查看文档：[更新日志](https://github.com/cgfeel/laravel-rotate-captcha/blob/main/docs/changelog.md)
 
 ## 🔗 相关产品 (Product)
 
