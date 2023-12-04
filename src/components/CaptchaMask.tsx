@@ -4,11 +4,11 @@ import { CaptchaContext } from "./Captcha";
 import { CaptchaCloseProps } from "./CaptchaClose";
 
 const CaptchaMask: FC<CaptchaMaskProps> = ({ close }) => {
-    const { type: [code] } = useContext(CaptchaContext);
+    const { type: [code,,force] } = useContext(CaptchaContext);
     return (
         <div
             className="captcha-mask"
-            onClick={() => code == 3 && close()}
+            onClick={() => (code == 3 || force === true) && close()}
         ></div>
     );
 };

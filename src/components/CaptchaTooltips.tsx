@@ -1,12 +1,11 @@
 import { FC, useContext } from "react";
-import "../assets/icon/iconfont.css";
+import Gantanhao from "../assets/tips/gantanhao.svg";
+import Shibai from "../assets/tips/shibai.svg";
+import Shuaxin from "../assets/tips/shuaxin.svg";
+import Zhengque from "../assets/tips/zhengque.svg";
 import { CaptchaContext } from "./Captcha";
 
-const icon = [
-    <i className="iconfont">&#xe8ad;</i>,
-    <i className="iconfont">&#xe8a9;</i>,
-];
-
+const icon = [<Zhengque />, <Shibai />];
 const color = ['tips-success', 'tips-fail'];
 
 const CaptchaTooltips: FC<TooltipsProps> = ({ reLoad }) => {
@@ -20,7 +19,7 @@ const CaptchaTooltips: FC<TooltipsProps> = ({ reLoad }) => {
             <div
                 className={`captcha-tips${colorTips ? (' ' + colorTips) : ''}`}
             >
-                {icon[code]||<i className="iconfont">&#xe8a5;</i>}
+                {icon[code]||<Gantanhao />}
                 <span
                     className="captcha-tooltip-shot"
                 >
@@ -34,7 +33,7 @@ const CaptchaTooltips: FC<TooltipsProps> = ({ reLoad }) => {
                     disabled={code !== 3}
                     onClick={reLoad}
                 >
-                    {refresh}<i className={`iconfont${code === 2 ? ' loading' : ''}`}>&#xe8aa;</i>
+                    {refresh}<Shuaxin className={code === 2 ? 'loading' : ''} />
                 </button>
             </div>
         </div>

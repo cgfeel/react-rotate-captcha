@@ -227,7 +227,7 @@ body:has(.rotate-captcha) {
             display: inline-flex;
             padding: 0;
         }
-        i {
+        svg {
             display: inline-block;
             margin-left: 3px;
             &.loading {
@@ -243,7 +243,8 @@ body:has(.rotate-captcha) {
         display: flex;
         min-width: 0;
         position: relative;
-        i {
+        svg {
+            display: inline-block;
             margin-right: 3px;
         }
         .captcha-tooltip-shot {
@@ -268,6 +269,11 @@ body:has(.rotate-captcha) {
         justify-content: space-between;
         margin: 15px auto 0;
         width: var(--captcha-size-control);
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
     }
     .captcha-wrap {
         align-items: center;

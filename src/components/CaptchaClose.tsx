@@ -4,12 +4,14 @@ import "../assets/index.scss";
 import { CaptchaContext } from "./Captcha";
 
 const CaptchaClose: FC<CaptchaCloseProps> = ({ close }) => {
-    const { type: [code] } = useContext(CaptchaContext);
+    const { type: [code,,force] } = useContext(CaptchaContext);
+    const disabled = code !== 3 && force !== true;
+
     return (
         <button 
-            className={`captcha-modal-close${code === 3 ? '' : ' captcha-modal-close-disabled'}`}
-            disabled={code !== 3}
-            onClick={() => code === 3 && close()}
+            className={`captcha-modal-close${!disabled ? '' : ' captcha-modal-close-disabled'}`}
+            disabled={disabled}
+            onClick={() => (code === 3 || force === true) && close()}
         >
             <Close />
         </button>
