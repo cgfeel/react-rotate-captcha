@@ -191,7 +191,7 @@ function App() {
 
 ```
     "typeRoots": [
-      "./node_modules/@types"
+        "./node_modules/@types"
     ]
 ```
 
