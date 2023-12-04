@@ -1,4 +1,5 @@
-# react-rotate-captcha
+![logo-react](https://github.com/cgfeel/react-rotate-captcha/assets/578141/ce57a69a-f80c-433f-a450-eb4c3e0379dc)
+
 A captcha extension package for React
 
 ```
