@@ -41,7 +41,6 @@ const InternalCaptcha: ForwardRefRenderFunction<CaptchaInstance, PropsWithChildr
         close: (force = false) => {
             if (open !== true) {
                 modal.current?.load(force ? 0 : 2);
-                return;
             }
             if (onClose !== undefined) onClose();
         },
