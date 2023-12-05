@@ -43,8 +43,8 @@ import { useState } from 'react';
 import RotateCaptcha from "react-rotate-captcha";
 
 function App() {
-    const [open] = useState(true);
-    return <RotateCaptcha open={open} />
+    const [open, setOpen] = useState(true);
+    return <RotateCaptcha open={open} onClose={() => setOpen(false)} />
 }
 ```
 
