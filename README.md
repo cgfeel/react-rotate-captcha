@@ -108,12 +108,13 @@ function App() {
 
 ### Captcha Event Props
 
-接受4个方法，只有`result`是同步函数，其余全部为异步函数
+接受5个方法，只有`result`是同步函数，其余全部为异步函数
 
 | 参数 | 说明 | 参数 | 返回值 |
 | ----- | ----- | ----- | ----- |
 | get | 初始获取验证码信息 | - | `Promise<resultType<tokenType>>` |
 | load | 提取`tokenType`中的`str`去换图片，返回图片`URL`路径或图片`base64`字符 | `path: string` | `Promise<string>` |
+| onClose | 关闭浮窗触发，以`status`唤起的验证，必须提供`onClose`来关闭 | - | `void` |
 | result | 提取正确或错误的票据结果，可选，也可以通过`verify`直接获取结果 | `info: resultType<ticketType>` | `void` |
 | verify | 滚动验证，返回票据信息 | `token: string`，`deg: number` | `Promise<resultType<ticketType>>` |
 
@@ -129,6 +130,8 @@ function App() {
 | close | 关闭浮窗，参数`force`默认值`false`，设为`true`将强制销毁验证浮窗 | `force?: boolean` |
 | open | 打开浮窗 | - |
 | reload | 重新获取验证码图片 | - |
+
+- `status`唤起的验证，不支持强制销毁
 
 ### CaptchaContext
 
