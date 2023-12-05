@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import RotateCaptcha from "react-rotate-captcha";
 import PageDemo from "./page";
 import OutSide from "./page/OutSide";
+import Statusoutput from "./page/Statusoutput";
 import { get, load, verify } from "./server";
 
 const Root = () => {
@@ -19,6 +20,7 @@ const Root = () => {
                 <PageDemo ref={demoRef} />
             </RotateCaptcha>
             <OutSide />
+            <Statusoutput />
         </StrictMode>
     );
 };

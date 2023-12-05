@@ -1,21 +1,22 @@
-import { FC, useRef, useState } from "react";
-import RotateCaptcha, { CaptchaInstance, TicketInfoType } from "react-rotate-captcha";
+import { FC, useState } from "react";
+import RotateCaptcha, { TicketInfoType } from "react-rotate-captcha";
 import ActionBtn from "../components/ActionBtn";
 import Wrapper from "../components/Wrapper";
 import { get, load, verify } from "../server";
 
-const OutSide: FC = () => {
-    const ref = useRef<CaptchaInstance>(null);
+const Statusoutput: FC = () => {
     const [ticket, setTicket] = useState<TicketInfoType|undefined>();
+    const [open, setOpen] = useState(false);
 
     return (
         <div
             className="container"
         >
             <RotateCaptcha
-                ref={ref}
+                open={open}
                 get={get}
                 load={load}
+                onClose={() => setOpen(false)}
                 result={info => setTicket(info)}
                 verify={verify}
             >
@@ -38,7 +39,7 @@ const OutSide: FC = () => {
                     captcha={[
                         <button 
                             key="verify"
-                            onClick={() => ref.current!.open()}
+                            onClick={() => setOpen(true)}
                         >
                             开始验证
                         </button>,
@@ -57,4 +58,4 @@ const OutSide: FC = () => {
     );
 };
 
-export default OutSide;
+export default Statusoutput;

@@ -47,6 +47,10 @@ const RotateCaptcha = forwardRef<RotateCaptchaInstance, PropsWithChildren<Rotate
     }, [lang, rotate, get, loadImg, show]);
 
     useEffect(() => {
+        setOpen(open => open === visible ? open : (visible === 0 ? 2 : 1));
+    }, [visible, setOpen]);
+
+    useEffect(() => {
         if (open === 0) show([2, lang.loadTips]);
     }, [open, show]);
 

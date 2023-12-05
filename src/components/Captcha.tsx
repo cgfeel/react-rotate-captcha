@@ -23,6 +23,7 @@ const InternalCaptcha: ForwardRefRenderFunction<CaptchaInstance, PropsWithChildr
         zIndex,
         get,
         load,
+        onClose,
         verify,
         lang: langRaw = 'zh_CN',
         result = resultDefault,
@@ -37,7 +38,13 @@ const InternalCaptcha: ForwardRefRenderFunction<CaptchaInstance, PropsWithChildr
     const modal = useRef<RotateCaptchaInstance>(null);
 
     const captchaInstance = {
-        close: (force = false) => modal.current?.load(force ? 0 : 2),
+        close: (force = false) => {
+            if (open !== true) {
+                modal.current?.load(force ? 0 : 2);
+                return;
+            }
+            if (onClose !== undefined) onClose();
+        },
         open: () => modal.current?.load(),
         reload: () => {
             if (currently[0] === 3) {
@@ -146,6 +153,7 @@ export interface CaptchaProps {
     zIndex?: number;
     get?: () => Promise<resultType<tokenType>>;
     load?: (path: string) => Promise<string>;
+    onClose?: () => void;
     result?: (info: resultType<ticketType>) => void;
     verify?: (token: string, deg: number) => Promise<resultType<ticketType>>;
 }

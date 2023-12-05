@@ -23,6 +23,7 @@ export interface CaptchaProps {
     zIndex?: number;
     get?: () => Promise<resultType<tokenType>>;
     load?: (path: string) => Promise<string>;
+    onClose?: () => void;
     result?: (info: resultType<ticketType>) => void;
     verify?: (token: string, deg: number) => Promise<resultType<ticketType>>;
 }
