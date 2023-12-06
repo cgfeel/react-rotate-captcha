@@ -213,7 +213,7 @@ function App() {
 
 ## 🛟 设计思路 (Design)
 
-安全策略详细见`laravel-rotate-captcha` [[查看](https://github.com/cgfeel/laravel-rotate-captcha#-策略-policie)]
+安全策略详细见`laravel-rotate-captcha` [[查看](https://github.com/cgfeel/laravel-rotate-captcha#-策略-policie)]，在提供允许的情况下，前端发送`X-Captchapolici`这个`header`，申请对应的权限。
 
 高级用法：
 
