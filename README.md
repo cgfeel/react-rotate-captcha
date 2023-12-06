@@ -230,7 +230,7 @@ function App() {
 
 ## 🗓️ 更新日志 (Changelog)
 
-具体请查看文档：[更新日志](https://github.com/cgfeel/laravel-rotate-captcha/blob/main/docs/changelog.md)
+具体请查看文档：[更新日志](https://github.com/cgfeel/react-rotate-captcha/blob/main/docs/changelog.md)
 
 ## 🔗 相关产品 (Product)
 
