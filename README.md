@@ -115,7 +115,7 @@ function App() {
 
 ### Captcha Event Props
 
-接受5个方法，只有`result`是同步函数，其余全部为异步函数
+接受5个方法，只有`onClose`和`result`是同步函数，其余全部为异步函数
 
 | 参数 | 说明 | 参数 | 返回值 |
 | ----- | ----- | ----- | ----- |
@@ -138,7 +138,7 @@ function App() {
 | open | 打开浮窗 | - |
 | reload | 重新获取验证码图片 | - |
 
-- `status`唤起的验证，不支持强制销毁
+- 通过`status`唤起的验证，不支持强制销毁
 
 ### CaptchaContext
 
