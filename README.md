@@ -213,6 +213,8 @@ function App() {
 
 ## 🛟 设计思路 (Design)
 
+安全策略详细见`laravel-rotate-captcha` [[查看](https://github.com/cgfeel/laravel-rotate-captcha#-策略-policie)]
+
 高级用法：
 
 - 验证流程中`ua`实际并不局限使用`User-Agent`，可以通过自定义头部加密拼接增加安全系数
