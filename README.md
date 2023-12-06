@@ -156,7 +156,7 @@ function App() {
 
 ## 🎯 接口 (Api)
 
-这里以开源的`levi/laravel-rotate-captcha`（[查看](https://github.com/cgfeel/laravel-rotate-captcha)）举例，提供了5个接口（[查看](https://github.com/cgfeel/laravel-rotate-captcha#%E4%BD%BF%E7%94%A8-usage)），请求参数和返回数据如下：
+这里以开源的`levi/laravel-rotate-captcha`（[查看](https://github.com/cgfeel/laravel-rotate-captcha)）举例，提供了5个接口（[查看](https://github.com/cgfeel/laravel-rotate-captcha#-使用-usage)），请求参数和返回数据如下：
 
 ### 获取验证码信息
 
