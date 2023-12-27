@@ -5,10 +5,11 @@
   "main": "./lib/index_bundle.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && webpack --config config/webpack.prod.config.js",
+    "clean": "rimraf lib",
     "dev": "webpack-dev-server --config config/webpack.dev.config.js",
-    "build": "webpack --config config/webpack.prod.config.js",
-    "pub": "pub"
+    "pub": "pub",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "react",
@@ -18,10 +19,16 @@
   "author": "levi",
   "license": "MIT",
   "homepage": "https://github.com/cgfeel/react-rotate-captcha",
+  "bugs": {
+    "url": "https://github.com/cgfeel/react-rotate-captcha/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/cgfeel/react-rotate-captcha"
   },
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.23.0",
     "@babel/core": "^7.23.3",
@@ -43,8 +50,10 @@
     "postcss-preset-env": "^9.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rimraf": "^5.0.5",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
+    "ts-loader": "^9.5.1",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1",

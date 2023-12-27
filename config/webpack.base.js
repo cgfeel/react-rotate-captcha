@@ -6,14 +6,21 @@ module.exports = {
     module: {
         rules: [
             {
-                // 编译处理 js 和 jsx 文件
-                test: /(\.js(x?))|(\.ts(x?))$/,
+                exclude: /node_modules/,
+                test: /\.js(x?)$/,
                 use: [
                     {
                         loader: 'babel-loader'
                     }
-                ],
-                exclude: /node_modules/,  // 只解析 src 目录下的文件
+                ]
+            },
+            {
+                exclude: /node_modules/,
+                test: /\.ts(x?)$/,
+                use: [
+                    { loader: 'babel-loader' },
+                    { loader: 'ts-loader' }
+                ]
             },
             {
                 test: /\.svg$/,
