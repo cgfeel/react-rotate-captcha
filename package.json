@@ -1,6 +1,6 @@
 {
   "name": "react-rotate-captcha",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "Rotate image captcha，旋转图片验证码",
   "main": "./lib/index_bundle.js",
   "types": "./lib/index.d.ts",
